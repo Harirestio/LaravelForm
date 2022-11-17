@@ -16,4 +16,35 @@ class PostController extends Controller
         $post->save();
         return redirect('add-blog-post-form')->with('status', 'Blog Post Form Data Has Been inserted');
     }
+
+    public function read()
+    {
+        $model_post=new Post;
+        $data=$model_post->all();
+        //echo "<pre>";
+        return view('read',['data'=>$data]);
+    }
+
+    public function edit($id)
+    {   
+        $model_post=new Post;
+        $data=$model_post->all();
+        //echo "<pre>";
+        return view('edit', ['data' =>$data]);
+    }
+    public function delete()
+    {
+        $model_post=new Post;
+        $data=$model_post->all();
+        //echo "<pre>";
+        return view('delete', ['id'=>$id]);
+    }
+    
+    public function destroy($id)
+    {
+        $model_post = Post::find($id);
+        $data=$model_post->delete();
+        //echo "<pre>";
+        return redirect('/read')->with('status', 'Blog Post Form Data Has Been deleted');
+    }
 }

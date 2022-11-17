@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 Route::get('add-blog-post-form', [PostController::class, 'index']);
 Route::post('store-form', [PostController::class, 'store']);
+Route::get('/read',[PostController::class, 'read']);
+Route::get('/edit/{id}', [PostController::class, 'edit']);
+Route::get('/delete/{id}', [PostController::class, 'destroy']);
+Route::put('/update/{data}', [PostController::class, 'update']);
