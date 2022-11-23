@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,6 +14,7 @@
 .card {
     box-shadow: 8px 8px 8px 8px #888888;
 }
+
 .table {
     width: auto;
     border: 3px;
