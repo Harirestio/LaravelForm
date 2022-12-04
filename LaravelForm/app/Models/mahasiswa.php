@@ -27,3 +27,4 @@ class Mahasiswa extends Model
         'jurusan'
     ];
 }
+// Mahardika Surya Kusuma G.231.21.0141

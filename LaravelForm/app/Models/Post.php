@@ -9,3 +9,4 @@ class Post extends Model
 {
     use HasFactory;
 }
+// Mahardika Surya Kusuma G.231.21.0141

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,17 +9,26 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/') }}">Praktikum Laravel</a>
+            <a class="navbar-brand" href="{{url('input-mahasiswa')}}">Praktikum Laravel</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                 <li class="nav-item">
+                    <a class="nav-link" href="{{url('add-blog-post-form')}}" aria-current="page" href="#">Tugas Mahasiswa</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{url('input-mahasiswa')}}">Input Data Mahasiswa</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="{{url('show-data-mahasiswa')}}">Daftar Data Mahasiswa</a>
+                </li>
+                <li class="nav-item">
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-light me-2">Keluar</button>
+                    </form>
                 </li>
                 </ul>
             </div>
